@@ -8,6 +8,7 @@ import elderImg from './assets/elder_care.png';
 import babyImg2 from './assets/baby_care_lifestyle.png';
 import elderImg2 from './assets/elder_care_lifestyle.png';
 import domesticImg from './assets/domestic_help.png';
+import appPreviewImg from './assets/PHOTO-2026-04-10-18-13-24.jpg';
 
 // SVGs mapped out for standard elements
 const AppleIcon = () => (
@@ -176,7 +177,7 @@ function App() {
           </div>
           
           <div className="phone-wrapper">
-            <div className="phone-mockup">
+            <div className="phone-mockup" style={{ backgroundImage: `url(${appPreviewImg})`, backgroundSize: 'cover', backgroundPosition: 'center' }}>
               <div className="phone-status-bar">
                 <span>9:41</span>
                 <div className="status-icons">
@@ -187,16 +188,6 @@ function App() {
               </div>
               <div className="dynamic-island"></div>
               
-              <div className="phone-top-shape"></div>
-              <div className="yellow-blob"></div>
-              
-              <div className="phone-content">
-                <h3>Connecting you with verified experts for specialized baby and elder care.</h3>
-                <div className="phone-btns">
-                  <button className="phone-btn btn-white">I have an account</button>
-                  <button className="phone-btn btn-orange-full">I'm new here</button>
-                </div>
-              </div>
               <div className="phone-home-indicator"></div>
             </div>
           </div>
