@@ -419,8 +419,8 @@ button {
 
 /* Info Section Styles */
 .info-section {
-  padding: 120px 60px; /* Increased top/bottom padding */
-  margin-top: 60px; /* Space from the overlapping blue box */
+  padding: 120px 60px;
+  margin-top: 200px; /* Increased to ensure zero overlap with hero */
   background-color: #fffaf5; /* Very light cream background */
   text-align: center;
   position: relative;
