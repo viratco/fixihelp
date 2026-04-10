@@ -4,6 +4,14 @@ import rollerScrewsImg from './assets/roller_screws.png';
 import fixiLogoImg from './assets/fixi-logo.png';
 import babyImg from './assets/baby_care.png';
 import elderImg from './assets/elder_care.png';
+import showerImg from './assets/service_shower.png';
+import sprinklerImg from './assets/service_sprinkler.png';
+import toolsImg from './assets/service_tools.png';
+import maidImg from './assets/service_maid.png';
+import paintImg from './assets/service_paint.png';
+import lawnImg from './assets/service_lawn.png';
+import streetImg from './assets/service_street.png';
+import prosImg from './assets/service_pros.png';
 
 // SVGs mapped out for standard elements
 const AppleIcon = () => (
@@ -217,6 +225,75 @@ function App() {
               <div className="card-overlay">
                 <div className="overlay-badge">
                    <span>Future-Ready Senior Care</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="services-cloud-section">
+          <div className="cloud-container">
+            {/* Centered Content */}
+            <div className="cloud-content">
+              <h2>Fixing made easy,<br/>one click away.</h2>
+              <p>From seasonal specials to bundled packages, we've got everything you need to keep your home in tip-top shape without breaking the bank.</p>
+            </div>
+
+            {/* Organic Floating Cards */}
+            <div className="floating-card-cloud">
+              <div className="cloud-card card-1">
+                <div className="card-inner">
+                  <img src={showerImg} alt="Install a shower" />
+                  <div className="cloud-card-info">
+                    <h4>Install <br/> a shower</h4>
+                    <span className="price-badge">average $8 069</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="cloud-card card-2 image-only">
+                <img src={prosImg} alt="Pros" />
+              </div>
+
+              <div className="cloud-card card-3">
+                <div className="card-inner">
+                  <img src={toolsImg} alt="Handyman" />
+                  <div className="cloud-card-info">
+                    <h4>Hire a <br/> handyman</h4>
+                    <span className="price-badge">average $412</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="cloud-card card-4 image-only">
+                <img src={paintImg} alt="Paint" />
+              </div>
+
+              <div className="cloud-card card-5 image-only">
+                <img src={lawnImg} alt="Lawn" />
+              </div>
+
+              <div className="cloud-card card-6">
+                <div className="card-inner">
+                  <img src={sprinklerImg} alt="Sprinkler" />
+                  <div className="cloud-card-info">
+                    <h4>Install a <br/> sprinkler sys.</h4>
+                    <span className="price-badge">average $2 266</span>
+                  </div>
+                </div>
+              </div>
+
+              <div className="cloud-card card-7 image-only">
+                <img src={streetImg} alt="Street" />
+              </div>
+
+              <div className="cloud-card card-8">
+                <div className="card-inner">
+                  <img src={maidImg} alt="Maid Service" />
+                  <div className="cloud-card-info">
+                    <h4>Hire a maid <br/> service</h4>
+                    <span className="price-badge">average $168</span>
+                  </div>
                 </div>
               </div>
             </div>
