@@ -814,3 +814,218 @@ button {
 .info-intro.scroll-reveal { transition-duration: 1s; }
 .care-intro.scroll-reveal { transition-duration: 1s; }
 
+/* Scheduler Section (Reference Image Style) */
+.scheduler-section {
+  padding: 100px 0 0;
+  position: relative;
+}
+
+.scheduler-bg-split {
+  background: linear-gradient(to bottom, #1a1a1a 50%, #f5f4f0 50%);
+  padding: 0 40px 100px;
+}
+
+.scheduler-card {
+  background: white;
+  border-radius: 60px;
+  max-width: 1400px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 100px 80px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.1);
+}
+
+.scheduler-left {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Decorative Blobs */
+.blobs-container {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+}
+
+.blob-item {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(0px);
+}
+
+.blob-green { width: 180px; height: 160px; background: #096339; bottom: -40px; left: -60px; border-radius: 40% 60% 70% 30%; }
+.blob-orange { width: 220px; height: 180px; background: #df7324; bottom: 20px; left: 180px; border-radius: 60% 40% 30% 70%; }
+.blob-light-green { width: 140px; height: 120px; background: #9edc90; top: 120px; left: 340px; border-radius: 50% 50% 40% 60%; }
+.blob-dark-green { width: 60px; height: 60px; background: #004d2e; top: 220px; left: 160px; }
+.blob-yellow { width: 120px; height: 140px; background: #f8a44d; bottom: 80px; left: 20px; opacity: 0.8; }
+
+/* Phone Mockup */
+.scheduler-phone {
+  background: #000;
+  width: 340px;
+  height: 680px;
+  border-radius: 55px;
+  padding: 12px;
+  position: relative;
+  box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+  z-index: 5;
+}
+
+.scheduler-phone-inner {
+  background: #f8f8f8;
+  width: 100%;
+  height: 100%;
+  border-radius: 45px;
+  overflow: hidden;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 30px 20px;
+}
+
+.phone-header-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 40px;
+}
+
+.phone-icon-left svg { width: 24px; height: 24px; color: #555; }
+.phone-close-right { font-size: 20px; color: #888; cursor: pointer; }
+
+.scheduler-app-header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.scheduler-app-header h3 { font-size: 28px; font-weight: 700; color: #1a1a1a; margin-bottom: 8px; }
+.scheduler-app-header p { font-size: 14px; color: #888; }
+
+.scheduler-list {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.scheduler-item {
+  background: white;
+  border-radius: 20px;
+  padding: 15px;
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+}
+
+.item-check {
+  width: 24px;
+  height: 24px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid #e0e0e0;
+}
+
+.scheduler-item.done .item-check {
+  background: #e9f5ef;
+  border-color: #a7d9c0;
+  color: #096339;
+  font-weight: 800;
+}
+
+.item-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.item-badge {
+  font-size: 10px;
+  color: #096339;
+  font-weight: 700;
+  background: #e9f5ef;
+  display: inline-block;
+  padding: 2px 8px;
+  border-radius: 10px;
+  width: fit-content;
+}
+
+.item-title {
+  font-size: 14px;
+  font-weight: 600;
+  color: #333;
+}
+
+.item-arrow { color: #ccc; font-size: 20px; }
+
+.scheduler-divider {
+  width: 2px;
+  height: 20px;
+  background: #eee;
+  margin-left: 26px;
+  border-style: dotted;
+  border-width: 0 0 0 2px;
+}
+
+/* Scheduler Right side */
+.scheduler-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 60px;
+}
+
+.scheduler-right h2 {
+  font-size: 64px;
+  line-height: 1;
+  font-weight: 800;
+  color: #1a1a1a;
+  margin-bottom: 30px;
+  letter-spacing: -3px;
+}
+
+.scheduler-right p {
+  font-size: 20px;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 50px;
+  max-width: 480px;
+}
+
+.orange-btn {
+  background-color: #df7324 !important;
+  border-color: #df7324 !important;
+}
+
+.scheduler-btns {
+  justify-content: flex-start;
+}
+
+/* Responsive Scheduler */
+@media (max-width: 1024px) {
+  .scheduler-card {
+    grid-template-columns: 1fr;
+    padding: 60px 30px;
+  }
+  
+  .scheduler-right {
+    padding-left: 0;
+    text-align: center;
+    align-items: center;
+    margin-top: 60px;
+  }
+  
+  .scheduler-right h2 { font-size: 42px; }
+  .scheduler-btns { justify-content: center; }
+}
+
