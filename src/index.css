@@ -106,11 +106,11 @@ button {
 }
 
 .hero h1 {
-  font-size: 82px;
+  font-size: 72px; /* Reduced from 82px for better wrapping */
   line-height: .95;
   font-weight: 600;
-  letter-spacing: -3.5px;
-  max-width: 800px;
+  letter-spacing: -3px; /* Slightly tighter */
+  max-width: 950px; /* Increased to allow 2-3 lines */
   margin: 0 auto 24px;
 }
 
