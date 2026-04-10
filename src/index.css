@@ -562,11 +562,11 @@ button {
 /* Services Cloud Section */
 .services-cloud-section {
   background-color: #111;
-  padding: 180px 20px;
+  padding: 240px 20px;
   position: relative;
   overflow: hidden;
   color: white;
-  min-height: 900px;
+  min-height: 1100px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -662,15 +662,15 @@ button {
   align-self: flex-start;
 }
 
-/* Specific Positions for circular "Halo" matching the reference exactly */
-.card-1 { width: 180px; height: 180px; top: -5%; left: 18%; }
-.card-2 { width: 110px; height: 110px; top: -12%; left: 48%; }
-.card-3 { width: 170px; height: 170px; top: 12%; right: 10%; }
-.card-4 { width: 120px; height: 120px; top: 40%; left: 2%; }
-.card-5 { width: 120px; height: 120px; top: 38%; right: 2%; }
-.card-6 { width: 180px; height: 180px; bottom: 0%; left: 8%; }
-.card-7 { width: 110px; height: 110px; bottom: -15%; left: 45%; }
-.card-8 { width: 180px; height: 180px; bottom: -5%; right: 15%; }
+/* Specific Positions for circular "Halo" with extreme spread to clear text */
+.card-1 { width: 180px; height: 180px; top: -15%; left: 10%; }
+.card-2 { width: 110px; height: 110px; top: -25%; left: 48%; }
+.card-3 { width: 170px; height: 170px; top: -10%; right: 5%; }
+.card-4 { width: 120px; height: 120px; top: 45%; left: -12%; }
+.card-5 { width: 120px; height: 120px; top: 40%; right: -12%; }
+.card-6 { width: 180px; height: 180px; bottom: -8%; left: 2%; }
+.card-7 { width: 110px; height: 110px; bottom: -30%; left: 45%; }
+.card-8 { width: 180px; height: 180px; bottom: -10%; right: 5%; }
 
 /* Image-only cards might not need inner info */
 .image-only .cloud-card-info { display: none; }
