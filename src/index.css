@@ -860,7 +860,7 @@ button {
   border-radius: 50px;
   border: 12px solid #333;
   position: absolute; /* Changed to absolute for precise floating */
-  top: -180px; /* Float above the card */
+  top: -280px; /* Moved up further */
   left: 0;
   overflow: hidden;
   box-shadow: 0 30px 60px rgba(0,0,0,0.4);
