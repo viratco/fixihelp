@@ -365,14 +365,8 @@ function App() {
                     </div>
                   </div>
                 </div>
-                <div className="scheduler-phone-blobs">
-                  <div className="blob blob-orange"></div>
-                  <div className="blob blob-yellow"></div>
-                  <div className="blob blob-green"></div>
-                </div>
               </div>
             </div>
-            
             <div className="scheduler-card-right">
               <h2>Care made easy, <br/> one click away.</h2>
               <p>From background-checked nannies to compassionate elder care, we've got everything you need to keep your family in safe hands without the stress.</p>
@@ -395,10 +389,12 @@ function App() {
               </div>
             </div>
 
-            <div className="card-branding-blobs">
-              <div className="brand-blob blob-1"></div>
-              <div className="brand-blob blob-2"></div>
-              <div className="brand-blob blob-3"></div>
+            <div className="card-branding-blobs-bottom">
+              <div className="brand-blob blob-yellow"></div>
+              <div className="brand-blob blob-orange"></div>
+              <div className="brand-blob blob-green-small"></div>
+              <div className="brand-blob blob-green-dark"></div>
+              <div className="brand-blob blob-green-light"></div>
             </div>
           </div>
         </section>

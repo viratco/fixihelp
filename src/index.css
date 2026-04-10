@@ -1008,11 +1008,14 @@ button {
   background: #df7324 !important;
 }
 
-.card-branding-blobs {
+.card-branding-blobs-bottom {
   position: absolute;
-  bottom: -100px;
-  right: -100px;
-  opacity: 0.6;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
 }
 
 .brand-blob {
@@ -1020,9 +1023,11 @@ button {
   border-radius: 50%;
 }
 
-.blob-1 { width: 300px; height: 300px; background: #008a4e; right: 50px; bottom: 20px; }
-.blob-2 { width: 200px; height: 200px; background: #f8a44d; right: 280px; bottom: 100px; }
-.blob-3 { width: 150px; height: 150px; background: #df7324; right: 100px; bottom: 250px; }
+.blob-yellow { width: 350px; height: 350px; background: #f8a44d; bottom: -100px; left: -120px; }
+.blob-orange { width: 450px; height: 350px; background: #df7324; bottom: -120px; left: 120px; }
+.blob-green-small { width: 100px; height: 100px; background: #006b3c; bottom: 100px; left: 320px; z-index: 2; }
+.blob-green-dark { width: 320px; height: 320px; background: #006b3c; bottom: -80px; left: 550px; }
+.blob-green-light { width: 220px; height: 220px; background: #b2dfad; bottom: 100px; left: 880px; }
 
 /* Responsive adjustments */
 @media (max-width: 1024px) {
@@ -1030,6 +1035,11 @@ button {
     grid-template-columns: 1fr;
     max-width: 600px;
     padding: 60px 30px;
+    overflow: hidden; /* Prevent blobs from breaking mobile layout */
+  }
+  .card-branding-blobs-bottom {
+    transform: scale(0.6);
+    bottom: -100px;
   }
   .scheduler-card-right h2 {
     font-size: 42px;
@@ -1040,6 +1050,7 @@ button {
     margin: 0 auto 50px;
     width: 300px;
     height: 600px;
+    z-index: 3;
   }
 }
 
