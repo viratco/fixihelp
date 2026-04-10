@@ -821,8 +821,10 @@ button {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 100px 20px;
-  padding: 180px 20px 100px; /* Increased top padding */
+  padding: 300px 20px 100px;
+  margin-top: -1px; /* Overlap slightly to hide subpixel gaps */
+  background-color: #1a1a1a; /* Solid background as fallback */
+  border: none;
 }
 
 .scheduler-bg-split {
@@ -831,7 +833,7 @@ button {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(to bottom, #1a1a1a 50%, #f7f4ed 50%);
+  background: linear-gradient(to bottom, #1a1a1a 50.5%, #f7f4ed 50%); /* Slight overlap in gradient to avoid aliasing */
   z-index: 1;
 }
 
