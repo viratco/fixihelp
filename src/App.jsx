@@ -4,14 +4,6 @@ import rollerScrewsImg from './assets/roller_screws.png';
 import fixiLogoImg from './assets/fixi-logo.png';
 import babyImg from './assets/baby_care.png';
 import elderImg from './assets/elder_care.png';
-import showerImg from './assets/service_shower.png';
-import sprinklerImg from './assets/service_sprinkler.png';
-import toolsImg from './assets/service_tools.png';
-import maidImg from './assets/service_maid.png';
-import paintImg from './assets/service_paint.png';
-import lawnImg from './assets/service_lawn.png';
-import streetImg from './assets/service_street.png';
-import prosImg from './assets/service_pros.png';
 
 // SVGs mapped out for standard elements
 const AppleIcon = () => (
@@ -71,6 +63,38 @@ const BatteryIcon = () => (
 const StarIcon = () => (
   <svg viewBox="0 0 24 24" stroke="currentColor" fill="none" strokeWidth="2" width="20" height="20">
     <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
+  </svg>
+);
+
+const RepairClockIcon = () => (
+  <svg viewBox="0 0 100 100" className="repair-card-icon">
+    <circle cx="50" cy="50" r="45" fill="#f8a44d" />
+    <circle cx="50" cy="50" r="38" fill="#7cc0b5" />
+    <text x="50" y="60" textAnchor="middle" fill="white" fontSize="24" fontWeight="bold" fontFamily="system-ui">24/7</text>
+    <path d="M50 20 L50 40 M55 40 L70 40" stroke="white" strokeWidth="4" strokeLinecap="round" />
+    <rect x="42" y="80" width="16" height="4" rx="2" fill="#555" />
+    <rect x="35" y="15" width="6" height="12" rx="3" fill="#f8a44d" transform="rotate(-30 38 20)" />
+    <rect x="59" y="15" width="6" height="12" rx="3" fill="#f8a44d" transform="rotate(30 62 20)" />
+  </svg>
+);
+
+const RepairTagIcon = () => (
+  <svg viewBox="0 0 100 100" className="repair-card-icon">
+    <path d="M20 50 L50 20 L85 20 L85 80 L50 80 Z" fill="#f8a44d" />
+    <path d="M25 50 L50 25 L80 25 L80 75 L50 75 Z" fill="#008a4e" />
+    <circle cx="40" cy="40" r="4" fill="white" />
+    <text x="58" y="58" textAnchor="middle" fill="white" fontSize="28" fontWeight="bold" fontFamily="system-ui">$</text>
+    <path d="M40 35 L30 25 C25 20 15 20 10 25 C5 30 5 40 10 45 L20 55" fill="none" stroke="#f8a44d" strokeWidth="3" />
+  </svg>
+);
+
+const RepairToolsIcon = () => (
+  <svg viewBox="0 0 100 100" className="repair-card-icon">
+    <path d="M20 70 L40 50 L50 60 L30 80 Z" fill="#555" />
+    <path d="M40 50 L50 40 C55 35 65 35 70 40 L75 45 C80 50 80 60 75 65 L70 70" fill="none" stroke="#555" strokeWidth="6" strokeLinecap="round" />
+    <path d="M60 70 L90 40 L80 30 L50 60 Z" fill="#00a8cc" />
+    <circle cx="75" cy="45" r="4" fill="white" />
+    <path d="M25 65 C25 45 40 30 50 30 C60 30 75 45 75 65 L25 65" fill="#f8a44d" />
   </svg>
 );
 
@@ -230,71 +254,33 @@ function App() {
             </div>
           </div>
         </section>
+        <section className="repair-services-section">
+          <div className="repair-intro">
+            <h2>Over 100 repair services to <br/> fix it right, right now!</h2>
+          </div>
 
-        <section className="services-cloud-section">
-          <div className="cloud-container">
-            {/* Centered Content */}
-            <div className="cloud-content">
-              <h2>Fixing made easy,<br/>one click away.</h2>
-              <p>From seasonal specials to bundled packages, we've got everything you need to keep your home in tip-top shape without breaking the bank.</p>
+          <div className="repair-grid">
+            <div className="repair-card">
+              <RepairClockIcon />
+              <div className="repair-card-content">
+                <h3>Expert technicians available 24/7 for all your repair needs.</h3>
+                <p>We guarantee prompt, reliable service with a smile.</p>
+              </div>
             </div>
 
-            {/* Organic Floating Cards */}
-            <div className="floating-card-cloud">
-              <div className="cloud-card card-1">
-                <div className="card-inner">
-                  <img src={showerImg} alt="Install a shower" />
-                  <div className="cloud-card-info">
-                    <h4>Install <br/> a shower</h4>
-                    <span className="price-badge">average $8 069</span>
-                  </div>
-                </div>
+            <div className="repair-card">
+              <RepairTagIcon />
+              <div className="repair-card-content">
+                <h3>Affordable rates with transparent pricing, no hidden fees.</h3>
+                <p>Quality workmanship backed by our satisfaction guarantee.</p>
               </div>
+            </div>
 
-              <div className="cloud-card card-2 image-only">
-                <img src={prosImg} alt="Pros" />
-              </div>
-
-              <div className="cloud-card card-3">
-                <div className="card-inner">
-                  <img src={toolsImg} alt="Handyman" />
-                  <div className="cloud-card-info">
-                    <h4>Hire a <br/> handyman</h4>
-                    <span className="price-badge">average $412</span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="cloud-card card-4 image-only">
-                <img src={paintImg} alt="Paint" />
-              </div>
-
-              <div className="cloud-card card-5 image-only">
-                <img src={lawnImg} alt="Lawn" />
-              </div>
-
-              <div className="cloud-card card-6">
-                <div className="card-inner">
-                  <img src={sprinklerImg} alt="Sprinkler" />
-                  <div className="cloud-card-info">
-                    <h4>Install a <br/> sprinkler sys.</h4>
-                    <span className="price-badge">average $2 266</span>
-                  </div>
-                </div>
-              </div>
-
-              <div className="cloud-card card-7 image-only">
-                <img src={streetImg} alt="Street" />
-              </div>
-
-              <div className="cloud-card card-8">
-                <div className="card-inner">
-                  <img src={maidImg} alt="Maid Service" />
-                  <div className="cloud-card-info">
-                    <h4>Hire a maid <br/> service</h4>
-                    <span className="price-badge">average $168</span>
-                  </div>
-                </div>
+            <div className="repair-card">
+              <RepairToolsIcon />
+              <div className="repair-card-content">
+                <h3>From plumbing to electrical, we've got all your repairs covered.</h3>
+                <p>Trustworthy professionals ready to tackle any job, big or small.</p>
               </div>
             </div>
           </div>
