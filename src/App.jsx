@@ -1,3 +1,4 @@
+import { useState, useEffect, useRef } from 'react';
 import './index.css';
 import hammerNailsImg from './assets/hammer_nails.png';
 import rollerScrewsImg from './assets/roller_screws.png';
@@ -102,8 +103,24 @@ const RepairToolsIcon = () => (
 );
 
 function App() {
+  const [scrollY, setScrollY] = useState(0);
+  const containerRef = useRef(null);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (containerRef.current) {
+        setScrollY(containerRef.current.scrollTop);
+      }
+    };
+    const container = containerRef.current;
+    if (container) {
+      container.addEventListener('scroll', handleScroll);
+      return () => container.removeEventListener('scroll', handleScroll);
+    }
+  }, []);
+
   return (
-    <div className="app-container">
+    <div className="app-container" ref={containerRef}>
       <header className="header">
         <div className="logo-container">
           <img src={fixiLogoImg} alt="FixiHelp Logo" className="logo-image" />
@@ -141,13 +158,13 @@ function App() {
           <div className="theme-bottom-bg"></div>
           
           {/* High-fidelity Hammer and Nails illustration leaning behind the phone */}
-          <div className="floating-element float-hammer-nails">
+          <div className="floating-element float-hammer-nails" style={{ transform: `rotate(-15deg) translateY(${scrollY * 0.3}px)` }}>
              <img src={hammerNailsImg} alt="Hammer and Nails" style={{ width: '320px', height: 'auto' }} />
           </div>
-          <div className="floating-element float-roller-screws">
+          <div className="floating-element float-roller-screws" style={{ transform: `rotate(8deg) translateY(${scrollY * -0.2}px)` }}>
              <img src={rollerScrewsImg} alt="Roller and Screws" style={{ width: '320px', height: 'auto' }} />
           </div>
-          <div className="floating-element float-screw-1">
+          <div className="floating-element float-screw-1" style={{ transform: `translateY(${scrollY * 0.5}px)` }}>
              <svg width="50" height="50" viewBox="0 0 50 50">
                <path d="M15,35 L30,10" stroke="#777" strokeWidth="4" strokeLinecap="round" />
                <ellipse cx="32" cy="10" rx="10" ry="4" fill="#555" transform="rotate(-30 32 10)" />
