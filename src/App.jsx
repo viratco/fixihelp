@@ -444,7 +444,7 @@ function App() {
             <img src={fixiLogoImg} alt="FixiHelp Logo" className="footer-logo" />
             <p>Building a future of specialized baby and elder care. Connecting families with verified experts for a better tomorrow.</p>
             <div className="footer-contact">
-              <a href="mailto:hello@fixihelp.com">hello@fixihelp.com</a>
+              <a href="mailto:team@fixihelp.com">team@fixihelp.com</a>
             </div>
           </div>
 
