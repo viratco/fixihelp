@@ -1207,11 +1207,49 @@ button {
 
 /* Responsive adjustments */
 @media (max-width: 1024px) {
+  /* Main Content Area Overrides */
+  .theme-bottom-bg {
+    height: 1200px;
+    top: 150px;
+    width: 92%;
+  }
+  .content-inner {
+    flex-direction: column;
+    align-items: center;
+    padding-top: 80px;
+    gap: 40px;
+  }
+  .left-text, .right-features {
+    width: 100%;
+    max-width: 500px;
+    text-align: center;
+    padding-top: 0;
+  }
+  .left-text h2 {
+    font-size: 34px;
+    margin-bottom: 30px;
+  }
+  .phone-wrapper {
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: none;
+    margin: 40px auto;
+    width: 280px;
+  }
+  .phone-mockup {
+    height: 560px;
+  }
+  .floating-element {
+    display: none;
+  }
+
+  /* Scheduler Overrides */
   .scheduler-card {
     grid-template-columns: 1fr;
     max-width: 600px;
     padding: 60px 30px;
-    overflow: hidden; /* Prevent blobs from breaking mobile layout */
+    overflow: hidden;
   }
   .card-branding-blobs-bottom {
     transform: scale(0.6);
