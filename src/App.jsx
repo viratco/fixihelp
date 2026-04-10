@@ -177,7 +177,7 @@ function App() {
           </div>
           
           <div className="phone-wrapper">
-            <div className="phone-mockup with-app-capture" style={{ backgroundImage: `url(${appPreviewImg})`, backgroundSize: 'cover', backgroundPosition: 'center 40px', backgroundRepeat: 'no-repeat', backgroundColor: '#fff' }}>
+            <div className="phone-mockup with-app-capture" style={{ backgroundImage: `url(${appPreviewImg})`, backgroundSize: 'cover', backgroundPosition: 'center 28px', backgroundRepeat: 'no-repeat', backgroundColor: '#fff' }}>
               <div className="phone-status-bar">
                 <span>9:41</span>
                 <div className="status-icons">
