@@ -333,36 +333,74 @@ function App() {
                   <div className="dynamic-island"></div>
                   
                   <div className="app-header">
+                    <div className="user-profile">
+                      <div className="avatar">JD</div>
+                      <div className="user-info">
+                        <span className="user-greeting">Hello, Jane</span>
+                        <span className="user-date">Friday, Oct 10</span>
+                      </div>
+                    </div>
                     <div className="app-icon-small"><SettingsIcon /></div>
-                    <div className="app-close-small">✕</div>
                   </div>
 
                   <div className="scheduler-app-content">
-                    <h2>Family Care <br/> Scheduler</h2>
-                    <p className="app-subtext">Let's handle your family care to-dos.</p>
+                    <div className="dashboard-summary">
+                      <div className="summary-card">
+                        <div className="summary-left">
+                          <span className="summary-label">Today's Care</span>
+                          <span className="summary-value">8.5 hrs</span>
+                        </div>
+                        <div className="summary-right">
+                          <div className="progress-mini"></div>
+                        </div>
+                      </div>
+                    </div>
+
+                    <h2 className="app-title-special">Care Plan</h2>
 
                     <div className="scheduler-list">
                       <div className="scheduler-item item-done">
-                        <div className="check-box">✓</div>
-                        <span>Morning Nanny Arrival</span>
-                        <div className="badge-diy">expert care</div>
+                        <div className="item-icon-wrap"><CheckIcon /></div>
+                        <div className="item-details">
+                          <span className="item-name">Morning Nanny Arrival</span>
+                          <span className="item-time">8:00 AM • Verified</span>
+                        </div>
+                        <div className="badge-diy">active</div>
                       </div>
+                      
                       <div className="scheduler-item item-done">
-                        <div className="check-box">✓</div>
-                        <span>Elder Medication Reminder</span>
-                        <div className="badge-diy">pro verified</div>
+                        <div className="item-icon-wrap"><CheckIcon /></div>
+                        <div className="item-details">
+                          <span className="item-name">Elder Med Reminder</span>
+                          <span className="item-time">10:30 AM • Confirmed</span>
+                        </div>
+                        <div className="badge-diy">done</div>
                       </div>
+
                       <div className="scheduler-item">
-                        <div className="check-box"></div>
-                        <span>Senior Wellness Check-in</span>
-                        <div className="badge-diy">expert care</div>
+                        <div className="item-icon-wrap-pending"><CalendarIcon /></div>
+                        <div className="item-details">
+                          <span className="item-name">Senior Wellness Check</span>
+                          <span className="item-time">2:00 PM • Pending</span>
+                        </div>
                       </div>
+
                       <div className="scheduler-item">
-                        <div className="check-box"></div>
-                        <span>Child Activity Planning</span>
-                        <div className="badge-diy">expert care</div>
+                        <div className="item-icon-wrap-pending"><StarIcon /></div>
+                        <div className="item-details">
+                          <span className="item-name">Child Activity Plan</span>
+                          <span className="item-time">4:00 PM • Scheduled</span>
+                        </div>
                       </div>
                     </div>
+                  </div>
+
+                  <div className="phone-bottom-nav">
+                    <div className="nav-item active"><CalendarIcon /></div>
+                    <div className="nav-item"><SettingsIcon /></div>
+                    <div className="nav-item-center"><div className="plus-btn">+</div></div>
+                    <div className="nav-item"><StarIcon /></div>
+                    <div className="nav-item"><CheckIcon /></div>
                   </div>
                 </div>
               </div>
