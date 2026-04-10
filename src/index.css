@@ -814,3 +814,224 @@ button {
 .info-intro.scroll-reveal { transition-duration: 1s; }
 .care-intro.scroll-reveal { transition-duration: 1s; }
 
+/* Scheduler Overlap Section */
+.scheduler-section {
+  position: relative;
+  min-height: 900px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 100px 20px;
+}
+
+.scheduler-bg-split {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to bottom, #1a1a1a 50%, #f7f4ed 50%);
+  z-index: 1;
+}
+
+.scheduler-card {
+  position: relative;
+  z-index: 2;
+  background-color: white;
+  width: 100%;
+  max-width: 1200px;
+  border-radius: 60px;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  padding: 80px;
+  box-shadow: 0 40px 100px rgba(0,0,0,0.15);
+  overflow: hidden;
+}
+
+.scheduler-card-left {
+  position: relative;
+}
+
+.scheduler-phone {
+  background: #000;
+  width: 340px;
+  height: 700px;
+  border-radius: 50px;
+  border: 12px solid #333;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 30px 60px rgba(0,0,0,0.4);
+}
+
+.scheduler-phone-inner {
+  background: #fff;
+  width: 100%;
+  height: 100%;
+  border-radius: 38px;
+  position: relative;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+  margin-bottom: 30px;
+}
+
+.app-icon-small svg {
+  width: 24px;
+  height: 24px;
+  color: #333;
+}
+
+.app-close-small {
+  font-size: 20px;
+  color: #888;
+}
+
+.scheduler-app-content h2 {
+  font-size: 32px;
+  color: #111;
+  line-height: 1.1;
+  margin-bottom: 10px;
+  font-family: inherit;
+  font-weight: 700;
+}
+
+.app-subtext {
+  font-size: 14px;
+  color: #888;
+  margin-bottom: 30px;
+}
+
+.scheduler-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.scheduler-item {
+  background: #fdfaf5;
+  border: 1px solid #eee;
+  border-radius: 12px;
+  padding: 12px 16px;
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.check-box {
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ddd;
+  border-radius: 6px;
+  margin-right: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 12px;
+}
+
+.item-done .check-box {
+  background: #4CAF50;
+  border-color: #4CAF50;
+  color: white;
+}
+
+.scheduler-item span {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.badge-diy {
+  position: absolute;
+  top: -8px;
+  right: 12px;
+  background: #e8f5e9;
+  color: #2e7d32;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 2px 8px;
+  border-radius: 10px;
+}
+
+.scheduler-phone-blobs {
+  position: absolute;
+  bottom: -40px;
+  left: -40px;
+  width: 100%;
+}
+
+.blob {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(2px);
+}
+
+.blob-orange { width: 150px; height: 150px; background: #df7324; bottom: 0; left: 40px; }
+.blob-yellow { width: 120px; height: 120px; background: #f8a44d; bottom: 40px; left: -20px; }
+.blob-green { width: 100px; height: 100px; background: #008a4e; bottom: -20px; left: 160px; }
+
+.scheduler-card-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.scheduler-card-right h2 {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.05;
+  margin-bottom: 30px;
+  color: #111;
+}
+
+.scheduler-card-right p {
+  font-size: 20px;
+  line-height: 1.6;
+  color: #444;
+  margin-bottom: 40px;
+  max-width: 480px;
+}
+
+.btn-orange {
+  background: #df7324 !important;
+}
+
+.card-branding-blobs {
+  position: absolute;
+  bottom: -100px;
+  right: -100px;
+  opacity: 0.6;
+}
+
+.brand-blob {
+  position: absolute;
+  border-radius: 50%;
+}
+
+.blob-1 { width: 300px; height: 300px; background: #008a4e; right: 50px; bottom: 20px; }
+.blob-2 { width: 200px; height: 200px; background: #f8a44d; right: 280px; bottom: 100px; }
+.blob-3 { width: 150px; height: 150px; background: #df7324; right: 100px; bottom: 250px; }
+
+/* Responsive adjustments */
+@media (max-width: 1024px) {
+  .scheduler-card {
+    grid-template-columns: 1fr;
+    max-width: 600px;
+    padding: 60px 30px;
+  }
+  .scheduler-card-right h2 {
+    font-size: 42px;
+  }
+  .scheduler-phone {
+    margin: 0 auto 50px;
+  }
+}
+
+
