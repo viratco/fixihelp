@@ -178,10 +178,10 @@ function App() {
         <section className="info-section">
           <div className="info-intro">
             <h2>
-              FixiHelp is building a future of <span className="highlight-orange">specialized professional care</span>, 
+              FixiHelp is building a future of <span className="highlight-orange">specialized baby and elder care</span>, 
               preparing to meet the unique needs of every modern family. 
               We are currently in our pre-market phase, laying the foundations 
-              for a revolution in home care and management.
+              for a revolution in compassionate care and specialized nanny support.
             </h2>
           </div>
 
