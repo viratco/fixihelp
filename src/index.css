@@ -417,6 +417,11 @@ button {
   z-index: 10;
 }
 
+.app-safe-area-top {
+  height: 40px;
+  width: 100%;
+}
+
 /* Info Section Styles */
 .info-section {
   padding: 120px 60px;
