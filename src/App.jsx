@@ -332,36 +332,35 @@ function App() {
                   </div>
                   <div className="dynamic-island"></div>
                   
+                  <div className="app-header">
+                    <div className="app-icon-small"><SettingsIcon /></div>
+                    <div className="app-close-small">✕</div>
+                  </div>
+
                   <div className="scheduler-app-content">
-                    <div className="app-header">
-                      <div className="app-icon-small">
-                        <SettingsIcon />
-                      </div>
-                      <div className="app-close-small">✕</div>
-                    </div>
-                    
-                    <h2>Home Care <br/> Scheduler</h2>
-                    <p className="app-subtext">Let's handle your home to dos.</p>
-                    
+                    <h2>Family Care <br/> Scheduler</h2>
+                    <p className="app-subtext">Let's handle your family care to-dos.</p>
+
                     <div className="scheduler-list">
                       <div className="scheduler-item item-done">
                         <div className="check-box">✓</div>
-                        <span>Run appliance clean cycles</span>
-                        <div className="badge-diy">do it yourself</div>
+                        <span>Morning Nanny Arrival</span>
+                        <div className="badge-diy">expert care</div>
                       </div>
                       <div className="scheduler-item item-done">
                         <div className="check-box">✓</div>
-                        <span>Power wash home exterior</span>
+                        <span>Elder Medication Reminder</span>
+                        <div className="badge-diy">pro verified</div>
                       </div>
                       <div className="scheduler-item">
                         <div className="check-box"></div>
-                        <span>Replace HVAC filter</span>
-                        <div className="badge-diy">do it yourself</div>
+                        <span>Senior Wellness Check-in</span>
+                        <div className="badge-diy">expert care</div>
                       </div>
                       <div className="scheduler-item">
                         <div className="check-box"></div>
-                        <span>Clean refrigerator coil</span>
-                        <div className="badge-diy">do it yourself</div>
+                        <span>Child Activity Planning</span>
+                        <div className="badge-diy">expert care</div>
                       </div>
                     </div>
                   </div>
@@ -375,8 +374,8 @@ function App() {
             </div>
             
             <div className="scheduler-card-right">
-              <h2>Fixing made easy, <br/> one click away.</h2>
-              <p>From seasonal specials to bundled packages, we've got everything you need to keep your home in tip-top shape without breaking the bank.</p>
+              <h2>Care made easy, <br/> one click away.</h2>
+              <p>From background-checked nannies to compassionate elder care, we've got everything you need to keep your family in safe hands without the stress.</p>
               
               <div className="store-buttons">
                 <button className="store-btn btn-orange">
