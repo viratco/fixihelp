@@ -316,97 +316,90 @@ function App() {
           </div>
         </section>
 
-        <section className="scheduler-section scroll-reveal fade-up">
-          <div className="scheduler-bg-split">
-            <div className="scheduler-card">
-              <div className="scheduler-left">
-                <div className="blobs-container">
-                  <div className="blob-item blob-green"></div>
-                  <div className="blob-item blob-orange"></div>
-                  <div className="blob-item blob-light-green"></div>
-                  <div className="blob-item blob-dark-green"></div>
-                  <div className="blob-item blob-yellow"></div>
-                </div>
-                
-                <div className="scheduler-phone">
-                  <div className="scheduler-phone-inner">
-                     <div className="phone-header-row">
-                        <span className="phone-icon-left">
-                          <SettingsIcon />
-                        </span>
-                        <span className="phone-close-right">✕</span>
-                     </div>
-                     <div className="scheduler-app-header">
-                       <h3>Home Care Scheduler</h3>
-                       <p>Let's handle your home to dos.</p>
-                     </div>
-                     
-                     <div className="scheduler-list">
-                       <div className="scheduler-item done">
-                         <div className="item-check">✓</div>
-                         <div className="item-content">
-                           <span className="item-badge">do it yourself</span>
-                           <span className="item-title">Run appliance clean cycles</span>
-                         </div>
-                         <span className="item-arrow">›</span>
-                       </div>
-                       
-                       <div className="scheduler-divider"></div>
-                       
-                       <div className="scheduler-item done">
-                         <div className="item-check">✓</div>
-                         <div className="item-content">
-                           <span className="item-title">Power wash home exterior</span>
-                         </div>
-                         <span className="item-arrow">›</span>
-                       </div>
-
-                       <div className="scheduler-divider"></div>
-
-                       <div className="scheduler-item">
-                         <div className="item-check empty"></div>
-                         <div className="item-content">
-                           <span className="item-badge">do it yourself</span>
-                           <span className="item-title">Replace HVAC filter</span>
-                         </div>
-                         <span className="item-arrow">›</span>
-                       </div>
-
-                       <div className="scheduler-divider"></div>
-
-                       <div className="scheduler-item">
-                         <div className="item-check empty"></div>
-                         <div className="item-content">
-                           <span className="item-badge">do it yourself</span>
-                           <span className="item-title">Clean refrigerator coil</span>
-                         </div>
-                         <span className="item-arrow">›</span>
-                       </div>
-                     </div>
+        <section className="scheduler-section">
+          <div className="scheduler-bg-split"></div>
+          <div className="scheduler-card scroll-reveal fade-up">
+            <div className="scheduler-card-left">
+              <div className="scheduler-phone">
+                <div className="scheduler-phone-inner">
+                  <div className="phone-status-bar">
+                    <span>9:41</span>
+                    <div className="status-icons">
+                      <SignalIcon />
+                      <WifiIcon />
+                      <BatteryIcon />
+                    </div>
+                  </div>
+                  <div className="dynamic-island"></div>
+                  
+                  <div className="scheduler-app-content">
+                    <div className="app-header">
+                      <div className="app-icon-small">
+                        <SettingsIcon />
+                      </div>
+                      <div className="app-close-small">✕</div>
+                    </div>
+                    
+                    <h2>Home Care <br/> Scheduler</h2>
+                    <p className="app-subtext">Let's handle your home to dos.</p>
+                    
+                    <div className="scheduler-list">
+                      <div className="scheduler-item item-done">
+                        <div className="check-box">✓</div>
+                        <span>Run appliance clean cycles</span>
+                        <div className="badge-diy">do it yourself</div>
+                      </div>
+                      <div className="scheduler-item item-done">
+                        <div className="check-box">✓</div>
+                        <span>Power wash home exterior</span>
+                      </div>
+                      <div className="scheduler-item">
+                        <div className="check-box"></div>
+                        <span>Replace HVAC filter</span>
+                        <div className="badge-diy">do it yourself</div>
+                      </div>
+                      <div className="scheduler-item">
+                        <div className="check-box"></div>
+                        <span>Clean refrigerator coil</span>
+                        <div className="badge-diy">do it yourself</div>
+                      </div>
+                    </div>
                   </div>
                 </div>
-              </div>
-
-              <div className="scheduler-right">
-                <h2>Fixing made easy,<br/>one click away.</h2>
-                <p>From seasonal specials to bundled packages, we've got everything you need to keep your home in tip-top shape without breaking the bank.</p>
-                <div className="store-buttons scheduler-btns">
-                  <button className="store-btn orange-btn">
-                    <AppleIcon />
-                    <div className="store-btn-text">
-                      <span className="store-btn-sub">Download on the</span>
-                      <span className="store-btn-main">App Store</span>
-                    </div>
-                  </button>
-                  <button className="store-btn orange-btn">
-                    <PlayIcon />
-                    <div className="store-btn-text">
-                      <span className="store-btn-sub">GET IT ON</span>
-                      <span className="store-btn-main">Google Play</span>
-                    </div>
-                  </button>
+                <div className="scheduler-phone-blobs">
+                  <div className="blob blob-orange"></div>
+                  <div className="blob blob-yellow"></div>
+                  <div className="blob blob-green"></div>
                 </div>
               </div>
+            </div>
+            
+            <div className="scheduler-card-right">
+              <h2>Fixing made easy, <br/> one click away.</h2>
+              <p>From seasonal specials to bundled packages, we've got everything you need to keep your home in tip-top shape without breaking the bank.</p>
+              
+              <div className="store-buttons">
+                <button className="store-btn btn-orange">
+                  <AppleIcon />
+                  <div className="store-btn-text">
+                    <span className="store-btn-sub">Download on the</span>
+                    <span className="store-btn-main">App Store</span>
+                  </div>
+                </button>
+                <button className="store-btn btn-orange">
+                  <PlayIcon />
+                  <div className="store-btn-text">
+                    <span className="store-btn-sub">GET IT ON</span>
+                    <span className="store-btn-main">Google Play</span>
+                  </div>
+                </button>
+              </div>
+            </div>
+
+            <div className="card-branding-blobs">
+              <div className="brand-blob blob-1"></div>
+              <div className="brand-blob blob-2"></div>
+              <div className="brand-blob blob-3"></div>
             </div>
           </div>
         </section>
