@@ -2,6 +2,8 @@ import './index.css';
 import hammerNailsImg from './assets/hammer_nails.png';
 import rollerScrewsImg from './assets/roller_screws.png';
 import fixiLogoImg from './assets/fixi-logo.png';
+import maidImg from './assets/maid_service.png';
+import familyImg from './assets/happy_family.png';
 
 // SVGs mapped out for standard elements
 const AppleIcon = () => (
@@ -55,6 +57,12 @@ const BatteryIcon = () => (
     <rect x="2" y="7" width="16" height="10" rx="2" />
     <path d="M22 11v2" />
     <rect x="4" y="9" width="12" height="6" fill="currentColor" />
+  </svg>
+);
+
+const StarIcon = () => (
+  <svg viewBox="0 0 24 24" stroke="currentColor" fill="none" strokeWidth="2" width="20" height="20">
+    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
   </svg>
 );
 
@@ -162,6 +170,54 @@ function App() {
                   <CheckIcon />
                 </div>
                 <div className="feature-text">No middlemen—connect directly with pros</div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="info-section">
+          <div className="info-intro">
+            <h2>
+              FixiHelp is here to support your household with professional care, 
+              tailored service plans, and <span className="highlight-orange">verified expertise</span>—all from the 
+              comfort of your home. Let's make your home management as smooth 
+              and joyful as it should be.
+            </h2>
+          </div>
+
+          <div className="info-grid">
+            <div className="info-card card-teal">
+              <div className="card-icon-circle seal-teal">
+                <CheckIcon />
+              </div>
+              <h3>400+ Successful Home Services Monthly</h3>
+              <p>Trusted by families worldwide for expert domestic help and maintenance support every month.</p>
+            </div>
+
+            <div className="info-card card-image">
+              <img src={maidImg} alt="Professional Maid Service" />
+              <div className="card-overlay">
+                <div className="overlay-badge">
+                   <SettingsIcon />
+                   <span>24/7 Support Availability</span>
+                </div>
+              </div>
+            </div>
+
+            <div className="info-card card-yellow">
+              <div className="card-icon-circle seal-yellow">
+                <StarIcon />
+              </div>
+              <h3>4.8/5 User Satisfaction Rating</h3>
+              <p>FixiHelp is trusted and loved by our users for providing reliable, convenient, and compassionate care.</p>
+            </div>
+
+            <div className="info-card card-image">
+              <img src={familyImg} alt="Happy Family" />
+              <div className="card-overlay">
+                <div className="overlay-badge">
+                   <span>5,000+ Positive Testimonials</span>
+                </div>
               </div>
             </div>
           </div>

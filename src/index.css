@@ -416,3 +416,142 @@ button {
   transform: rotate(8deg);
   z-index: 10;
 }
+
+/* Info Section Styles */
+.info-section {
+  padding: 80px 60px;
+  background-color: #fffaf5; /* Very light cream background */
+  text-align: center;
+}
+
+.info-intro {
+  max-width: 900px;
+  margin: 0 auto 60px;
+}
+
+.info-intro h2 {
+  font-size: 36px;
+  font-weight: 500;
+  line-height: 1.4;
+  color: #222;
+}
+
+.highlight-orange {
+  color: var(--primary-orange);
+}
+
+.info-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.info-card {
+  border-radius: 24px;
+  overflow: hidden;
+  height: 480px;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.3s ease;
+}
+
+.info-card:hover {
+  transform: translateY(-10px);
+}
+
+.card-teal {
+  background-color: #e0f7f3;
+  padding: 40px;
+}
+
+.card-yellow {
+  background-color: #fff9e6;
+  padding: 40px;
+}
+
+.card-image {
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+.card-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.card-icon-circle {
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 30px;
+}
+
+.seal-teal {
+  background-color: #b2eae1;
+  color: #0b6352;
+}
+
+.seal-yellow {
+  background-color: #fbe69e;
+  color: #8c6d00;
+}
+
+.info-card h3 {
+  font-size: 24px;
+  color: #222;
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.info-card p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.6;
+}
+
+.card-overlay {
+  position: absolute;
+  bottom: 30px;
+  left: 20px;
+  right: 20px;
+  z-index: 5;
+}
+
+.overlay-badge {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 12px 20px;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: 600;
+  font-size: 14px;
+  color: #222;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.overlay-badge span {
+  white-space: nowrap;
+}
+
+@media (max-width: 1100px) {
+  .info-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .info-grid {
+    grid-template-columns: 1fr;
+  }
+  .info-section {
+    padding: 60px 20px;
+  }
+}
