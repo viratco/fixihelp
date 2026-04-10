@@ -4,6 +4,9 @@ import rollerScrewsImg from './assets/roller_screws.png';
 import fixiLogoImg from './assets/fixi-logo.png';
 import babyImg from './assets/baby_care.png';
 import elderImg from './assets/elder_care.png';
+import babyImg2 from './assets/baby_care_lifestyle.png';
+import elderImg2 from './assets/elder_care_lifestyle.png';
+import domesticImg from './assets/domestic_help.png';
 
 // SVGs mapped out for standard elements
 const AppleIcon = () => (
@@ -254,33 +257,39 @@ function App() {
             </div>
           </div>
         </section>
-        <section className="repair-services-section">
-          <div className="repair-intro">
-            <h2>Over 100 repair services to <br/> fix it right, right now!</h2>
+        <section className="care-management-section">
+          <div className="care-intro">
+            <h2>Comprehensive care and home management <br/> for your family, right now!</h2>
           </div>
 
-          <div className="repair-grid">
-            <div className="repair-card">
-              <RepairClockIcon />
-              <div className="repair-card-content">
-                <h3>Expert technicians available 24/7 for all your repair needs.</h3>
-                <p>We guarantee prompt, reliable service with a smile.</p>
+          <div className="care-grid">
+            <div className="care-card">
+              <div className="care-card-image-wrapper">
+                <img src={babyImg2} alt="Specialized Nanny Support" />
+              </div>
+              <div className="care-card-content">
+                <h3>Verified nannies and baby care experts for your little ones.</h3>
+                <p>Ensuring your children grow in a safe, nurturing, and professional environment.</p>
               </div>
             </div>
 
-            <div className="repair-card">
-              <RepairTagIcon />
-              <div className="repair-card-content">
-                <h3>Affordable rates with transparent pricing, no hidden fees.</h3>
-                <p>Quality workmanship backed by our satisfaction guarantee.</p>
+            <div className="care-card">
+              <div className="care-card-image-wrapper">
+                <img src={elderImg2} alt="Compassionate Elder Care" />
+              </div>
+              <div className="care-card-content">
+                <h3>Compassionate elder care professionals for your seniors.</h3>
+                <p>Dedicated support to ensure dignity, health, and comfort for your aging loved ones.</p>
               </div>
             </div>
 
-            <div className="repair-card">
-              <RepairToolsIcon />
-              <div className="repair-card-content">
-                <h3>From plumbing to electrical, we've got all your repairs covered.</h3>
-                <p>Trustworthy professionals ready to tackle any job, big or small.</p>
+            <div className="care-card">
+              <div className="care-card-image-wrapper">
+                <img src={domesticImg} alt="Professional Home Management" />
+              </div>
+              <div className="care-card-content">
+                <h3>Background-checked domestic help and home management.</h3>
+                <p>Trustworthy experts to handle your home maintenance, cleaning, and more.</p>
               </div>
             </div>
           </div>
