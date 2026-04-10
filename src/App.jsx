@@ -81,7 +81,7 @@ function App() {
 
       <main>
         <section className="hero">
-          <h1>Find verified baby and elder care pros instantly.</h1>
+          <h1>Find verified baby and <br/> elder care pros <br/> instantly.</h1>
           <p>Hire background-checked nannies, caregivers, and specialized care experts direct—no agents.</p>
           
           <div className="store-buttons">
