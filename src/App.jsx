@@ -178,10 +178,10 @@ function App() {
         <section className="info-section">
           <div className="info-intro">
             <h2>
-              FixiHelp is here to support your family with <span className="highlight-orange">specialized professional care</span>, 
-              tailored to your unique needs—all from the comfort of 
-              your home. Let's make your home management as smooth 
-              and joyful as it should be.
+              FixiHelp is building a future of <span className="highlight-orange">specialized professional care</span>, 
+              preparing to meet the unique needs of every modern family. 
+              We are currently in our pre-market phase, laying the foundations 
+              for a revolution in home care and management.
             </h2>
           </div>
 
@@ -190,8 +190,8 @@ function App() {
               <div className="card-icon-circle seal-teal">
                 <CheckIcon />
               </div>
-              <h3>400+ Successful Care Consultations</h3>
-              <p>Trusted by families worldwide for expert nanny support and specialized senior care coordination every month.</p>
+              <h3>500+ Families on Early-Access Waitlist</h3>
+              <p>Significant early demand as we prepare to connect families with expert nanny and specialized care support.</p>
             </div>
 
             <div className="info-card card-image">
@@ -199,7 +199,7 @@ function App() {
               <div className="card-overlay">
                 <div className="overlay-badge">
                    <SettingsIcon />
-                   <span>Expert Baby & Nanny Support</span>
+                   <span>Expert-Led Nanny Infrastructure</span>
                 </div>
               </div>
             </div>
@@ -208,15 +208,15 @@ function App() {
               <div className="card-icon-circle seal-yellow">
                 <StarIcon />
               </div>
-              <h3>4.8/5 Satisfaction in Specialized Care</h3>
-              <p>FixiHelp is highly rated for providing reliable, professional, and compassionate care for your most loved ones.</p>
+              <h3>95% Positive Market Validation</h3>
+              <p>Extensive pre-launch research confirms a high need for reliable, professional, and compassionate home care.</p>
             </div>
 
             <div className="info-card card-image">
               <img src={elderImg} alt="Compassionate Elder Care" />
               <div className="card-overlay">
                 <div className="overlay-badge">
-                   <span>Verified Senior Care Services</span>
+                   <span>Future-Ready Senior Care</span>
                 </div>
               </div>
             </div>
