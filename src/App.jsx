@@ -437,6 +437,58 @@ function App() {
           </div>
         </section>
       </main>
+
+      <footer className="footer-section">
+        <div className="footer-content">
+          <div className="footer-col brand-col">
+            <img src={fixiLogoImg} alt="FixiHelp Logo" className="footer-logo" />
+            <p>Building a future of specialized baby and elder care. Connecting families with verified experts for a better tomorrow.</p>
+            <div className="footer-contact">
+              <a href="mailto:hello@fixihelp.com">hello@fixihelp.com</a>
+            </div>
+          </div>
+
+          <div className="footer-col">
+            <h4>Services</h4>
+            <ul>
+              <li><a href="#">Baby Care</a></li>
+              <li><a href="#">Elder Care</a></li>
+              <li><a href="#">Home Management</a></li>
+              <li><a href="#">Join Waitlist</a></li>
+            </ul>
+          </div>
+
+          <div className="footer-col">
+            <h4>Company</h4>
+            <ul>
+              <li><a href="#">About Us</a></li>
+              <li><a href="#">Careers</a></li>
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+            </ul>
+          </div>
+
+          <div className="footer-col stores-col">
+            <h4>Get the App</h4>
+            <div className="footer-store-btns">
+              <button className="footer-store-btn">App Store</button>
+              <button className="footer-store-btn">Google Play</button>
+            </div>
+            <div className="social-links">
+              <a href="#">𝕏</a>
+              <a href="#">📸</a>
+              <a href="#">💼</a>
+            </div>
+          </div>
+        </div>
+
+        <div className="footer-bottom">
+          <p>© 2026 FixiHelp Inc. All rights reserved.</p>
+          <div className="footer-legal">
+            <span>Made with Care.</span>
+          </div>
+        </div>
+      </footer>
     </div>
   );
 }
