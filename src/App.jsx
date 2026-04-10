@@ -1,4 +1,3 @@
-import { useState, useEffect, useRef } from 'react';
 import './index.css';
 import hammerNailsImg from './assets/hammer_nails.png';
 import rollerScrewsImg from './assets/roller_screws.png';
@@ -103,24 +102,8 @@ const RepairToolsIcon = () => (
 );
 
 function App() {
-  const [scrollY, setScrollY] = useState(0);
-  const containerRef = useRef(null);
-
-  useEffect(() => {
-    const handleScroll = () => {
-      if (containerRef.current) {
-        setScrollY(containerRef.current.scrollTop);
-      }
-    };
-    const container = containerRef.current;
-    if (container) {
-      container.addEventListener('scroll', handleScroll);
-      return () => container.removeEventListener('scroll', handleScroll);
-    }
-  }, []);
-
   return (
-    <div className="app-container" ref={containerRef}>
+    <div className="app-container">
       <header className="header">
         <div className="logo-container">
           <img src={fixiLogoImg} alt="FixiHelp Logo" className="logo-image" />
@@ -132,7 +115,7 @@ function App() {
       </header>
 
       <main>
-        <section className="hero">
+        <section className="hero scroll-reveal fade-up">
           <h1>Find verified baby and <br/> elder care pros <br/> instantly.</h1>
           <p>Hire background-checked nannies, caregivers, and specialized care experts direct—no agents.</p>
           
@@ -158,13 +141,13 @@ function App() {
           <div className="theme-bottom-bg"></div>
           
           {/* High-fidelity Hammer and Nails illustration leaning behind the phone */}
-          <div className="floating-element float-hammer-nails" style={{ transform: `rotate(-15deg) translateY(${scrollY * 0.3}px)` }}>
+          <div className="floating-element float-hammer-nails">
              <img src={hammerNailsImg} alt="Hammer and Nails" style={{ width: '320px', height: 'auto' }} />
           </div>
-          <div className="floating-element float-roller-screws" style={{ transform: `rotate(8deg) translateY(${scrollY * -0.2}px)` }}>
+          <div className="floating-element float-roller-screws">
              <img src={rollerScrewsImg} alt="Roller and Screws" style={{ width: '320px', height: 'auto' }} />
           </div>
-          <div className="floating-element float-screw-1" style={{ transform: `translateY(${scrollY * 0.5}px)` }}>
+          <div className="floating-element float-screw-1">
              <svg width="50" height="50" viewBox="0 0 50 50">
                <path d="M15,35 L30,10" stroke="#777" strokeWidth="4" strokeLinecap="round" />
                <ellipse cx="32" cy="10" rx="10" ry="4" fill="#555" transform="rotate(-30 32 10)" />
@@ -203,21 +186,21 @@ function App() {
             </div>
             
             <div className="right-features">
-              <div className="feature-item">
+              <div className="feature-item scroll-reveal fade-in stagger-1">
                 <div className="feature-icon">
                   <SettingsIcon />
                 </div>
                 <div className="feature-text">Specialized on-demand baby & elder care</div>
               </div>
               
-              <div className="feature-item">
+              <div className="feature-item scroll-reveal fade-in stagger-2">
                 <div className="feature-icon">
                   <CalendarIcon />
                 </div>
                 <div className="feature-text">Verified nannies, caregivers & professional experts</div>
               </div>
               
-              <div className="feature-item">
+              <div className="feature-item scroll-reveal fade-in stagger-3">
                 <div className="feature-icon">
                   <CheckIcon />
                 </div>
@@ -238,7 +221,7 @@ function App() {
           </div>
 
           <div className="info-grid">
-            <div className="info-card card-teal">
+            <div className="info-card card-teal scroll-reveal fade-up stagger-1">
               <div className="card-icon-circle seal-teal">
                 <CheckIcon />
               </div>
@@ -246,7 +229,7 @@ function App() {
               <p>Significant early demand as we prepare to connect families with expert nanny and specialized care support.</p>
             </div>
 
-            <div className="info-card card-image">
+            <div className="info-card card-image scroll-reveal fade-up stagger-2">
               <img src={babyImg} alt="Specialized Baby Care" />
               <div className="card-overlay">
                 <div className="overlay-badge">
@@ -256,7 +239,7 @@ function App() {
               </div>
             </div>
 
-            <div className="info-card card-yellow">
+            <div className="info-card card-yellow scroll-reveal fade-up stagger-3">
               <div className="card-icon-circle seal-yellow">
                 <StarIcon />
               </div>
@@ -264,7 +247,7 @@ function App() {
               <p>Extensive pre-launch research confirms a high need for reliable, professional, and compassionate home care.</p>
             </div>
 
-            <div className="info-card card-image">
+            <div className="info-card card-image scroll-reveal fade-up stagger-4">
               <img src={elderImg} alt="Compassionate Elder Care" />
               <div className="card-overlay">
                 <div className="overlay-badge">
@@ -280,7 +263,7 @@ function App() {
           </div>
 
           <div className="care-grid">
-            <div className="care-card">
+            <div className="care-card scroll-reveal fade-up stagger-1">
               <div className="care-card-image-wrapper">
                 <img src={babyImg2} alt="Specialized Nanny Support" />
               </div>
@@ -290,7 +273,7 @@ function App() {
               </div>
             </div>
 
-            <div className="care-card">
+            <div className="care-card scroll-reveal fade-up stagger-2">
               <div className="care-card-image-wrapper">
                 <img src={elderImg2} alt="Compassionate Elder Care" />
               </div>
@@ -300,7 +283,7 @@ function App() {
               </div>
             </div>
 
-            <div className="care-card">
+            <div className="care-card scroll-reveal fade-up stagger-3">
               <div className="care-card-image-wrapper">
                 <img src={domesticImg} alt="Professional Home Management" />
               </div>
