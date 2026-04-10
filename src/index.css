@@ -1008,26 +1008,35 @@ button {
   background: #df7324 !important;
 }
 
+.scheduler-card-left, 
+.scheduler-card-right {
+  position: relative;
+  z-index: 5; /* Ensure all content is above the blobs */
+}
+
 .card-branding-blobs-bottom {
   position: absolute;
-  bottom: 0;
+  top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   pointer-events: none;
-  z-index: 1;
+  z-index: 1; /* Keep blobs at the very bottom of the card layer stack */
+  overflow: visible;
 }
 
 .brand-blob {
   position: absolute;
   border-radius: 50%;
+  filter: blur(40px); /* Increased blur for a smoother, atmospheric look */
+  opacity: 0.6; /* Reduced opacity */
 }
 
-.blob-yellow { width: 350px; height: 350px; background: #f8a44d; bottom: -100px; left: -120px; }
-.blob-orange { width: 450px; height: 350px; background: #df7324; bottom: -120px; left: 120px; }
-.blob-green-small { width: 100px; height: 100px; background: #006b3c; bottom: 100px; left: 320px; z-index: 2; }
-.blob-green-dark { width: 320px; height: 320px; background: #006b3c; bottom: -80px; left: 550px; }
-.blob-green-light { width: 220px; height: 220px; background: #b2dfad; bottom: 100px; left: 880px; }
+.blob-yellow { width: 280px; height: 280px; background: #f8a44d; bottom: -80px; left: -80px; }
+.blob-orange { width: 400px; height: 320px; background: #df7324; bottom: -100px; left: 150px; }
+.blob-green-small { width: 60px; height: 60px; background: #006b3c; bottom: 100px; left: 340px; z-index: 2; opacity: 0.5; filter: blur(5px); }
+.blob-green-dark { width: 250px; height: 250px; background: #006b3c; bottom: -60px; left: 550px; }
+.blob-green-light { width: 180px; height: 180px; background: #b2dfad; bottom: 120px; left: 880px; }
 
 /* Responsive adjustments */
 @media (max-width: 1024px) {
