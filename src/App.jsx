@@ -2,8 +2,8 @@ import './index.css';
 import hammerNailsImg from './assets/hammer_nails.png';
 import rollerScrewsImg from './assets/roller_screws.png';
 import fixiLogoImg from './assets/fixi-logo.png';
-import maidImg from './assets/maid_service.png';
-import familyImg from './assets/happy_family.png';
+import babyImg from './assets/baby_care.png';
+import elderImg from './assets/elder_care.png';
 
 // SVGs mapped out for standard elements
 const AppleIcon = () => (
@@ -178,9 +178,9 @@ function App() {
         <section className="info-section">
           <div className="info-intro">
             <h2>
-              FixiHelp is here to support your household with professional care, 
-              tailored service plans, and <span className="highlight-orange">verified expertise</span>—all from the 
-              comfort of your home. Let's make your home management as smooth 
+              FixiHelp is here to support your family with <span className="highlight-orange">specialized professional care</span>, 
+              tailored to your unique needs—all from the comfort of 
+              your home. Let's make your home management as smooth 
               and joyful as it should be.
             </h2>
           </div>
@@ -190,16 +190,16 @@ function App() {
               <div className="card-icon-circle seal-teal">
                 <CheckIcon />
               </div>
-              <h3>400+ Successful Home Services Monthly</h3>
-              <p>Trusted by families worldwide for expert domestic help and maintenance support every month.</p>
+              <h3>400+ Successful Care Consultations</h3>
+              <p>Trusted by families worldwide for expert nanny support and specialized senior care coordination every month.</p>
             </div>
 
             <div className="info-card card-image">
-              <img src={maidImg} alt="Professional Maid Service" />
+              <img src={babyImg} alt="Specialized Baby Care" />
               <div className="card-overlay">
                 <div className="overlay-badge">
                    <SettingsIcon />
-                   <span>24/7 Support Availability</span>
+                   <span>Expert Baby & Nanny Support</span>
                 </div>
               </div>
             </div>
@@ -208,15 +208,15 @@ function App() {
               <div className="card-icon-circle seal-yellow">
                 <StarIcon />
               </div>
-              <h3>4.8/5 User Satisfaction Rating</h3>
-              <p>FixiHelp is trusted and loved by our users for providing reliable, convenient, and compassionate care.</p>
+              <h3>4.8/5 Satisfaction in Specialized Care</h3>
+              <p>FixiHelp is highly rated for providing reliable, professional, and compassionate care for your most loved ones.</p>
             </div>
 
             <div className="info-card card-image">
-              <img src={familyImg} alt="Happy Family" />
+              <img src={elderImg} alt="Compassionate Elder Care" />
               <div className="card-overlay">
                 <div className="overlay-badge">
-                   <span>5,000+ Positive Testimonials</span>
+                   <span>Verified Senior Care Services</span>
                 </div>
               </div>
             </div>
