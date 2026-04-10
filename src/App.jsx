@@ -81,8 +81,8 @@ function App() {
 
       <main>
         <section className="hero">
-          <h1>Find verified home service<br/>pros instantly.</h1>
-          <p>Hire background-checked maids, nannies, drivers, and cleaning experts direct—no agents.</p>
+          <h1>Find verified baby and <br/> elder care pros instantly.</h1>
+          <p>Hire background-checked nannies, caregivers, and <br/> specialized care experts direct—no agents.</p>
           
           <div className="store-buttons">
             <button className="store-btn">
@@ -135,7 +135,7 @@ function App() {
               <div className="yellow-blob"></div>
               
               <div className="phone-content">
-                <h3>Connecting you with verified professionals for care, cleaning & maintenance.</h3>
+                <h3>Connecting you with verified experts for specialized baby and elder care.</h3>
                 <div className="phone-btns">
                   <button className="phone-btn btn-white">I have an account</button>
                   <button className="phone-btn btn-orange-full">I'm new here</button>
@@ -155,14 +155,14 @@ function App() {
                 <div className="feature-icon">
                   <SettingsIcon />
                 </div>
-                <div className="feature-text">On-demand domestic & maintenance services</div>
+                <div className="feature-text">Specialized on-demand baby & elder care</div>
               </div>
               
               <div className="feature-item">
                 <div className="feature-icon">
                   <CalendarIcon />
                 </div>
-                <div className="feature-text">Strictly police-verified, background-checked staff</div>
+                <div className="feature-text">Verified nannies, caregivers & professional experts</div>
               </div>
               
               <div className="feature-item">
