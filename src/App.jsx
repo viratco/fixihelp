@@ -178,7 +178,6 @@ function App() {
           
           <div className="phone-wrapper">
             <div className="phone-mockup with-app-capture" style={{ backgroundImage: `url(${appPreviewImg})`, backgroundSize: 'cover', backgroundPosition: 'center 40px', backgroundRepeat: 'no-repeat', backgroundColor: '#fff' }}>
-              <div className="app-safe-area-top"></div>
               <div className="phone-status-bar">
                 <span>9:41</span>
                 <div className="status-icons">
@@ -189,6 +188,7 @@ function App() {
               </div>
               <div className="dynamic-island"></div>
               
+              <div className="app-safe-area-top"></div>
               <div className="phone-home-indicator"></div>
             </div>
           </div>
