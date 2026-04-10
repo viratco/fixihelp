@@ -1,3 +1,4 @@
+import { useEffect } from 'react';
 import './index.css';
 import hammerNailsImg from './assets/hammer_nails.png';
 import rollerScrewsImg from './assets/roller_screws.png';
@@ -102,9 +103,29 @@ const RepairToolsIcon = () => (
 );
 
 function App() {
+  useEffect(() => {
+    const observerOptions = {
+      threshold: 0.1,
+      rootMargin: '0px 0px -50px 0px'
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, observerOptions);
+
+    const revealElements = document.querySelectorAll('.scroll-reveal');
+    revealElements.forEach(el => observer.observe(el));
+
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <div className="app-container">
-      <header className="header">
+      <header className="header scroll-reveal fade-in">
         <div className="logo-container">
           <img src={fixiLogoImg} alt="FixiHelp Logo" className="logo-image" />
         </div>
