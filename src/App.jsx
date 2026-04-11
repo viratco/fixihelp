@@ -177,26 +177,26 @@ function App() {
              </svg>
           </div>
           
+          <div className="phone-wrapper">
+            <div className="phone-mockup with-app-capture" style={{ backgroundImage: `url(${appPreviewImg})`, backgroundSize: 'cover', backgroundPosition: 'center 28px', backgroundRepeat: 'no-repeat', backgroundColor: '#fff' }}>
+              <div className="phone-status-bar">
+                <span>9:41</span>
+                <div className="status-icons">
+                  <SignalIcon />
+                  <WifiIcon />
+                  <BatteryIcon />
+                </div>
+              </div>
+              <div className="dynamic-island"></div>
+              
+              <div className="app-safe-area-top"></div>
+              <div className="phone-home-indicator"></div>
+            </div>
+          </div>
+
           <div className="content-inner">
             <div className="left-text">
               <h2>How FixiHelp helps your family?</h2>
-            </div>
-
-            <div className="phone-wrapper">
-              <div className="phone-mockup with-app-capture" style={{ backgroundImage: `url(${appPreviewImg})`, backgroundSize: 'cover', backgroundPosition: 'center 28px', backgroundRepeat: 'no-repeat', backgroundColor: '#fff' }}>
-                <div className="phone-status-bar">
-                  <span>9:41</span>
-                  <div className="status-icons">
-                    <SignalIcon />
-                    <WifiIcon />
-                    <BatteryIcon />
-                  </div>
-                </div>
-                <div className="dynamic-island"></div>
-                
-                <div className="app-safe-area-top"></div>
-                <div className="phone-home-indicator"></div>
-              </div>
             </div>
             
             <div className="right-features">
