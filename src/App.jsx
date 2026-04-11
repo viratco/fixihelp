@@ -9,6 +9,7 @@ import babyImg2 from './assets/baby_care_lifestyle.png';
 import elderImg2 from './assets/elder_care_lifestyle.png';
 import domesticImg from './assets/domestic_help.png';
 import appPreviewImg from './assets/PHOTO-2026-04-10-18-13-24.jpg';
+import getStartedImg from './assets/PHOTO-2026-04-11-12-51-42.jpg';
 
 // SVGs mapped out for standard elements
 const AppleIcon = () => (
@@ -312,89 +313,18 @@ function App() {
           <div className="scheduler-bg-split"></div>
           <div className="scheduler-card scroll-reveal fade-up">
             <div className="scheduler-card-left">
-              <div className="scheduler-phone">
-                <div className="scheduler-phone-inner">
-                  <div className="phone-status-bar">
-                    <span>9:41</span>
-                    <div className="status-icons">
-                      <SignalIcon />
-                      <WifiIcon />
-                      <BatteryIcon />
-                    </div>
-                  </div>
-                  <div className="dynamic-island"></div>
-                  
-                  <div className="app-header">
-                    <div className="user-profile">
-                      <div className="avatar">JD</div>
-                      <div className="user-info">
-                        <span className="user-greeting">Hello, Jane</span>
-                        <span className="user-date">Friday, Oct 10</span>
-                      </div>
-                    </div>
-                    <div className="app-icon-small"><SettingsIcon /></div>
-                  </div>
-
-                  <div className="scheduler-app-content">
-                    <div className="dashboard-summary">
-                      <div className="summary-card">
-                        <div className="summary-left">
-                          <span className="summary-label">Today's Care</span>
-                          <span className="summary-value">8.5 hrs</span>
-                        </div>
-                        <div className="summary-right">
-                          <div className="progress-mini"></div>
-                        </div>
-                      </div>
-                    </div>
-
-                    <h2 className="app-title-special">Care Plan</h2>
-
-                    <div className="scheduler-list">
-                      <div className="scheduler-item item-done">
-                        <div className="item-icon-wrap"><CheckIcon /></div>
-                        <div className="item-details">
-                          <span className="item-name">Morning Nanny Arrival</span>
-                          <span className="item-time">8:00 AM • Verified</span>
-                        </div>
-                        <div className="badge-diy">active</div>
-                      </div>
-                      
-                      <div className="scheduler-item item-done">
-                        <div className="item-icon-wrap"><CheckIcon /></div>
-                        <div className="item-details">
-                          <span className="item-name">Elder Med Reminder</span>
-                          <span className="item-time">10:30 AM • Confirmed</span>
-                        </div>
-                        <div className="badge-diy">done</div>
-                      </div>
-
-                      <div className="scheduler-item">
-                        <div className="item-icon-wrap-pending"><CalendarIcon /></div>
-                        <div className="item-details">
-                          <span className="item-name">Senior Wellness Check</span>
-                          <span className="item-time">2:00 PM • Pending</span>
-                        </div>
-                      </div>
-
-                      <div className="scheduler-item">
-                        <div className="item-icon-wrap-pending"><StarIcon /></div>
-                        <div className="item-details">
-                          <span className="item-name">Child Activity Plan</span>
-                          <span className="item-time">4:00 PM • Scheduled</span>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-
-                  <div className="phone-bottom-nav">
-                    <div className="nav-item active"><CalendarIcon /></div>
-                    <div className="nav-item"><SettingsIcon /></div>
-                    <div className="nav-item-center"><div className="plus-btn">+</div></div>
-                    <div className="nav-item"><StarIcon /></div>
-                    <div className="nav-item"><CheckIcon /></div>
+              <div className="scheduler-phone with-app-capture" style={{ backgroundImage: `url(${getStartedImg})`, backgroundSize: 'cover', backgroundPosition: 'center 28px', backgroundRepeat: 'no-repeat', backgroundColor: '#fff' }}>
+                <div className="phone-status-bar">
+                  <span>9:41</span>
+                  <div className="status-icons">
+                    <SignalIcon />
+                    <WifiIcon />
+                    <BatteryIcon />
                   </div>
                 </div>
+                <div className="dynamic-island"></div>
+                <div className="app-safe-area-top"></div>
+                <div className="phone-home-indicator"></div>
               </div>
             </div>
             <div className="scheduler-card-right">
