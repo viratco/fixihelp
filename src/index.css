@@ -867,13 +867,14 @@ button {
 
 .scheduler-phone {
   background: #000;
-  width: 340px;
-  height: 700px;
-  border-radius: 50px;
-  border: 12px solid #333;
-  position: absolute; /* Changed to absolute for precise floating */
-  top: -280px; /* Moved up further */
-  left: 0;
+  width: 320px;
+  height: 650px;
+  border-radius: 48px;
+  border: 8px solid #333;
+  position: absolute;
+  top: -180px;
+  left: 50%;
+  transform: translateX(-50%);
   overflow: hidden;
   box-shadow: 0 30px 60px rgba(0,0,0,0.4);
 }
@@ -1259,7 +1260,7 @@ button {
     grid-template-columns: 1fr;
     max-width: 600px;
     padding: 60px 30px;
-    overflow: hidden;
+    overflow: visible;
   }
   .card-branding-blobs-bottom {
     transform: scale(0.6);
