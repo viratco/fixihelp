@@ -1237,42 +1237,77 @@ button {
     letter-spacing: -2px;
   }
 
-  /* —— Content / Device Mockup Area ——
-     IMPORTANT: Keep theme-bottom-bg as position:absolute.
-     Give content-area a min-height so absolute children render. */
+  /* —— Content / Device Mockup Area (STRICT FLOW FIX) ——
+     We switch to flex-column and use 'display: contents' on the inner container
+     to allow the phone to sit exactly between the title and the features.
+     This guarantees zero overlap regardless of screen scale or text length. */
   .content-area {
-    min-height: 900px;
-  }
-  .theme-bottom-bg {
-    /* Stay absolute, just resize */
-    top: 160px;
-    height: 650px;
-    width: 90%;
-  }
-  .content-inner {
+    display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 280px 30px 60px; /* reduced top padding since phone takes up less space */
-    gap: 40px;
-    max-width: 540px;
-    margin: 0 auto;
+    min-height: auto;
+    background-color: transparent;
+    padding: 0 20px;
+    margin-top: 40px;
   }
-  .left-text, .right-features {
+  .theme-bottom-bg {
+    /* Stretch to cover the entire flex section */
+    top: 0;
+    left: 0;
+    transform: none;
     width: 100%;
-    padding-top: 0;
+    height: 100%;
+    max-width: 100%;
+    border-radius: 40px;
+    z-index: 1;
+  }
+  .content-inner {
+    display: contents; /* MAGIC: Children become siblings of the phone in the flexbox */
+  }
+  .left-text {
+    order: 1;
+    width: 100%;
+    max-width: 480px;
+    padding: 60px 0 0;
     text-align: center;
+    position: relative;
+    z-index: 10;
   }
   .left-text h2 {
-    font-size: 34px;
-    letter-spacing: -1px;
+    font-size: 38px;
+    line-height: 1.1;
+    margin-bottom: 20px;
   }
   .phone-wrapper {
-    /* Stay absolute — just scale down */
-    width: 260px;
+    order: 2;
+    position: relative;
+    top: auto;
+    left: auto;
+    transform: none;
+    margin: 40px auto;
+    width: 240px;
+    z-index: 10;
+    pointer-events: auto;
   }
   .phone-mockup {
-    height: 530px;
-    border-radius: 42px;
+    height: 480px;
+    border-radius: 40px;
+  }
+  .right-features {
+    order: 3;
+    width: 100%;
+    max-width: 480px;
+    padding: 0 0 80px;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+  }
+  .feature-item {
+    justify-content: center;
+  }
+  .feature-text {
+    font-size: 18px;
+    text-align: left;
   }
   .floating-element {
     display: none;
@@ -1376,33 +1411,15 @@ button {
     gap: 12px;
   }
 
-  /* —— Content / Device Mockup Area ——
-     Stay absolute. Give content-area the right min-height for small screens. */
-  .content-area {
-    min-height: 800px;
-  }
-  .theme-bottom-bg {
-    top: 140px;
-    height: 550px;
-    width: 92%;
-    border-radius: 28px;
-  }
-  .content-inner {
-    padding: 240px 20px 60px;
-    gap: 30px;
-  }
+  /* —— Content / Device Mockup Area —— */
   .left-text h2 {
-    font-size: 28px;
-  }
-  .feature-text {
-    font-size: 16px;
+    font-size: 32px;
   }
   .phone-wrapper {
     width: 220px;
   }
   .phone-mockup {
-    height: 450px;
-    border-radius: 38px;
+    height: 440px;
   }
 
   /* —— Info Section —— */
