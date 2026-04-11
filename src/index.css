@@ -1279,10 +1279,10 @@ button {
   }
   .scheduler-phone {
     position: relative;
-    top: -100px;
+    top: -60px; /* Reduced from -100px to keep it within the card/view */
     margin: 0 auto 50px;
-    width: 300px;
-    height: 600px;
+    width: 280px; /* Slightly narrower for better fit */
+    height: 580px;
     z-index: 3;
   }
   .footer-content {
@@ -1328,10 +1328,10 @@ button {
 
   /* Scheduler Overrides */
   .scheduler-section {
-    padding: 200px 20px 60px;
+    padding: 140px 20px 60px;
   }
   .scheduler-bg-split {
-    background: linear-gradient(to bottom, #1a1a1a 30%, #f7f4ed 30%);
+    background: linear-gradient(to bottom, #1a1a1a 15%, #f7f4ed 15%);
   }
 
   /* Footer Overrides */
