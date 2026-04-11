@@ -1279,9 +1279,11 @@ button {
   }
   .scheduler-phone {
     position: relative;
-    top: -60px; /* Reduced from -100px to keep it within the card/view */
+    top: -60px;
+    left: auto; /* Reset desktop absolute positioning */
+    transform: none; /* Reset desktop transform */
     margin: 0 auto 50px;
-    width: 280px; /* Slightly narrower for better fit */
+    width: 280px;
     height: 580px;
     z-index: 3;
   }
