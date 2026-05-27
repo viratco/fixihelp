@@ -143,20 +143,20 @@ function App() {
           <p>Hire background-checked nannies, caregivers, and specialized care experts direct—no agents.</p>
           
           <div className="store-buttons">
-            <button className="store-btn">
+            <a href="https://apps.apple.com/in/app/fixihelp/id6762078669" target="_blank" rel="noopener noreferrer" className="store-btn">
               <AppleIcon />
               <div className="store-btn-text">
                 <span className="store-btn-sub">Download on the</span>
                 <span className="store-btn-main">App Store</span>
               </div>
-            </button>
-            <button className="store-btn">
+            </a>
+            <a href="https://play.google.com/store/apps/details?id=com.viratco.fixi&hl=en" target="_blank" rel="noopener noreferrer" className="store-btn">
               <PlayIcon />
               <div className="store-btn-text">
                 <span className="store-btn-sub">GET IT ON</span>
                 <span className="store-btn-main">Google Play</span>
               </div>
-            </button>
+            </a>
           </div>
         </section>
 
@@ -332,20 +332,20 @@ function App() {
               <p>From background-checked nannies to compassionate elder care, we've got everything you need to keep your family in safe hands without the stress.</p>
               
               <div className="store-buttons">
-                <button className="store-btn btn-orange">
+                <a href="https://apps.apple.com/in/app/fixihelp/id6762078669" target="_blank" rel="noopener noreferrer" className="store-btn btn-orange">
                   <AppleIcon />
                   <div className="store-btn-text">
                     <span className="store-btn-sub">Download on the</span>
                     <span className="store-btn-main">App Store</span>
                   </div>
-                </button>
-                <button className="store-btn btn-orange">
+                </a>
+                <a href="https://play.google.com/store/apps/details?id=com.viratco.fixi&hl=en" target="_blank" rel="noopener noreferrer" className="store-btn btn-orange">
                   <PlayIcon />
                   <div className="store-btn-text">
                     <span className="store-btn-sub">GET IT ON</span>
                     <span className="store-btn-main">Google Play</span>
                   </div>
-                </button>
+                </a>
               </div>
             </div>
 
@@ -393,8 +393,8 @@ function App() {
           <div className="footer-col stores-col">
             <h4>Get the App</h4>
             <div className="footer-store-btns">
-              <button className="footer-store-btn">App Store</button>
-              <button className="footer-store-btn">Google Play</button>
+              <a href="https://apps.apple.com/in/app/fixihelp/id6762078669" target="_blank" rel="noopener noreferrer" className="footer-store-btn">App Store</a>
+              <a href="https://play.google.com/store/apps/details?id=com.viratco.fixi&hl=en" target="_blank" rel="noopener noreferrer" className="footer-store-btn">Google Play</a>
             </div>
             <div className="social-links">
               <a href="#">𝕏</a>
