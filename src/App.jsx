@@ -1,5 +1,8 @@
-import { useEffect } from 'react';
+import { useState, useEffect } from 'react';
+import { motion, AnimatePresence } from 'framer-motion';
+import { X, User, Phone, CheckCircle, Loader2 } from 'lucide-react';
 import './index.css';
+const WEB3FORMS_ACCESS_KEY = "6f58eafd-3c1d-4a77-beda-fa99127f761f";
 import hammerNailsImg from './assets/hammer_nails.png';
 import rollerScrewsImg from './assets/roller_screws.png';
 import fixiLogoImg from './assets/fixi-logo.png';
@@ -105,6 +108,112 @@ const RepairToolsIcon = () => (
 );
 
 function App() {
+  const [isModalOpen, setIsModalOpen] = useState(false);
+  const [name, setName] = useState('');
+  const [phone, setPhone] = useState('');
+  const [errors, setErrors] = useState({});
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccess, setIsSuccess] = useState(false);
+
+  useEffect(() => {
+    if (!isModalOpen) {
+      const timer = setTimeout(() => {
+        setName('');
+        setPhone('');
+        setErrors({});
+        setIsSuccess(false);
+      }, 300);
+      return () => clearTimeout(timer);
+    }
+  }, [isModalOpen]);
+
+  // Set auto-open flag if user opens it manually
+  useEffect(() => {
+    if (isModalOpen) {
+      sessionStorage.setItem('waitlist_auto_opened', 'true');
+    }
+  }, [isModalOpen]);
+
+  // Auto-open modal on scroll
+  useEffect(() => {
+    const hasAutoOpened = sessionStorage.getItem('waitlist_auto_opened');
+    if (hasAutoOpened) return;
+
+    const handleScroll = () => {
+      // Trigger if user scrolls more than 400px
+      if (window.scrollY > 400) {
+        setIsModalOpen(true);
+        window.removeEventListener('scroll', handleScroll);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
+
+  const handleSubmit = async (e) => {
+    e.preventDefault();
+    const newErrors = {};
+
+    if (!name.trim()) {
+      newErrors.name = 'Full name is required';
+    } else if (name.trim().length < 2) {
+      newErrors.name = 'Name must be at least 2 characters';
+    }
+
+    const cleanPhone = phone.replace(/\D/g, '');
+    if (!phone.trim()) {
+      newErrors.phone = 'Phone number is required';
+    } else if (cleanPhone.length < 10) {
+      newErrors.phone = 'Please enter a valid 10-digit phone number';
+    }
+
+    if (Object.keys(newErrors).length > 0) {
+      setErrors(newErrors);
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    try {
+      if (WEB3FORMS_ACCESS_KEY === "YOUR_ACCESS_KEY_HERE") {
+        // Fallback for development if Key is not yet configured
+        setTimeout(() => {
+          setIsSubmitting(false);
+          setIsSuccess(true);
+        }, 1200);
+        return;
+      }
+
+      const response = await fetch("https://api.web3forms.com/submit", {
+        method: "POST",
+        headers: { 
+          'Content-Type': 'application/json',
+          'Accept': 'application/json'
+        },
+        body: JSON.stringify({
+          access_key: WEB3FORMS_ACCESS_KEY,
+          name: name,
+          phone: phone,
+          subject: "New FixiHelp Waitlist Lead: " + name,
+          from_name: "FixiHelp Waitlist"
+        })
+      });
+
+      const data = await response.json();
+
+      if (data.success) {
+        setIsSuccess(true);
+      } else {
+        setErrors({ submit: data.message || "Something went wrong. Please try again." });
+      }
+    } catch (error) {
+      setErrors({ submit: "Connection issue. Please check your network and try again." });
+    } finally {
+      setIsSubmitting(false);
+    }
+  };
+
   useEffect(() => {
     const observerOptions = {
       threshold: 0.1,
@@ -134,7 +243,7 @@ function App() {
         <nav className="nav-links">
           <a href="#">Home</a>
         </nav>
-        <button className="btn-primary">Coming soon</button>
+        <button className="btn-primary" onClick={() => setIsModalOpen(true)}>Join Waitlist</button>
       </header>
 
       <main>
@@ -376,7 +485,7 @@ function App() {
               <li><a href="#">Baby Care</a></li>
               <li><a href="#">Elder Care</a></li>
               <li><a href="#">Home Management</a></li>
-              <li><a href="#">Join Waitlist</a></li>
+              <li><button onClick={() => setIsModalOpen(true)} className="footer-link-btn">Join Waitlist</button></li>
             </ul>
           </div>
 
@@ -411,6 +520,115 @@ function App() {
           </div>
         </div>
       </footer>
+
+      {/* Modal Popup */}
+      <AnimatePresence>
+        {isModalOpen && (
+          <motion.div
+            className="modal-backdrop"
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            onClick={() => setIsModalOpen(false)}
+          >
+            <motion.div
+              className="modal-card"
+              initial={{ scale: 0.95, y: 30, opacity: 0 }}
+              animate={{ scale: 1, y: 0, opacity: 1 }}
+              exit={{ scale: 0.95, y: 30, opacity: 0 }}
+              transition={{ type: 'spring', damping: 25, stiffness: 350 }}
+              onClick={(e) => e.stopPropagation()}
+            >
+              <button 
+                className="modal-close-btn" 
+                onClick={() => setIsModalOpen(false)} 
+                aria-label="Close modal"
+              >
+                <X size={20} />
+              </button>
+
+              {!isSuccess ? (
+                <form onSubmit={handleSubmit} className="waitlist-form">
+                  <div className="form-header">
+                    <img src={fixiLogoImg} alt="FixiHelp Logo" className="modal-logo" />
+                    <span className="form-badge">Early Access</span>
+                    <h2>Join the Waitlist</h2>
+                    <p>Be the first to know when we launch verified baby & elder care in your area.</p>
+                  </div>
+
+                  <div className="form-group">
+                    <label htmlFor="name">Full Name</label>
+                    <div className="input-wrapper">
+                      <User size={18} className="input-icon" />
+                      <input
+                        id="name"
+                        type="text"
+                        placeholder="John Doe"
+                        value={name}
+                        onChange={(e) => {
+                          setName(e.target.value);
+                          if (errors.name) setErrors({ ...errors, name: '' });
+                        }}
+                        className={errors.name ? 'input-error' : ''}
+                      />
+                    </div>
+                    {errors.name && <span className="error-message">{errors.name}</span>}
+                  </div>
+
+                  <div className="form-group">
+                    <label htmlFor="phone">Phone Number</label>
+                    <div className="input-wrapper">
+                      <Phone size={18} className="input-icon" />
+                      <input
+                        id="phone"
+                        type="tel"
+                        placeholder="Phone Number"
+                        value={phone}
+                        onChange={(e) => {
+                          setPhone(e.target.value);
+                          if (errors.phone) setErrors({ ...errors, phone: '' });
+                        }}
+                        className={errors.phone ? 'input-error' : ''}
+                      />
+                    </div>
+                    {errors.phone && <span className="error-message">{errors.phone}</span>}
+                  </div>
+
+                  {errors.submit && <span className="error-message" style={{ textAlign: 'center', display: 'block', marginBottom: '8px' }}>{errors.submit}</span>}
+
+                  <button type="submit" className="btn-submit" disabled={isSubmitting}>
+                    {isSubmitting ? (
+                      <>
+                        <Loader2 className="animate-spin" size={18} />
+                        Joining...
+                      </>
+                    ) : (
+                      'Secure My Spot'
+                    )}
+                  </button>
+                </form>
+              ) : (
+                <motion.div
+                  className="success-state"
+                  initial={{ opacity: 0, scale: 0.8 }}
+                  animate={{ opacity: 1, scale: 1 }}
+                  transition={{ type: 'spring', delay: 0.1 }}
+                >
+                  <img src={fixiLogoImg} alt="FixiHelp Logo" className="modal-logo success-logo" />
+                  <div className="success-icon-wrapper">
+                    <CheckCircle size={48} className="success-icon" />
+                  </div>
+                  <h2>You're on the list!</h2>
+                  <p>Thanks for joining, <strong>{name}</strong>! We'll text you at <strong>{phone}</strong> soon with exclusive pre-launch benefits.</p>
+                  <button className="btn-secondary" onClick={() => setIsModalOpen(false)}>
+                    Back to Home
+                  </button>
+                </motion.div>
+              )}
+            </motion.div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </div>
   );
 }
