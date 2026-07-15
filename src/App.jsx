@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, User, Phone, CheckCircle, Loader2 } from 'lucide-react';
+import { Analytics } from '@vercel/analytics/react';
 import './index.css';
 const WEB3FORMS_ACCESS_KEY = "6f58eafd-3c1d-4a77-beda-fa99127f761f";
 import hammerNailsImg from './assets/hammer_nails.png';
@@ -629,6 +630,7 @@ function App() {
           </motion.div>
         )}
       </AnimatePresence>
+      <Analytics />
     </div>
   );
 }
