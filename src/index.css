@@ -506,6 +506,12 @@ button {
   margin-bottom: 20px; /* Reduced from 30px */
 }
 
+.card-icon-circle svg {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
 .seal-teal {
   background-color: #b2eae1;
   color: #0b6352;
@@ -549,6 +555,12 @@ button {
   font-size: 13px; /* Reduced from 14px */
   color: #222;
   box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+
+.overlay-badge svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
 }
 
 .overlay-badge span {
@@ -1220,14 +1232,16 @@ button {
 @media (max-width: 1024px) {
   /* Main Content Area Overrides */
   .theme-bottom-bg {
-    height: 1200px;
+    position: absolute;
     top: 150px;
+    bottom: 0;
+    height: auto;
     width: 92%;
   }
   .content-inner {
     flex-direction: column;
     align-items: center;
-    padding-top: 80px;
+    padding: 80px 20px 80px;
     gap: 40px;
   }
   .left-text, .right-features {
@@ -1294,6 +1308,21 @@ button {
 }
 
 @media (max-width: 768px) {
+  /* Header Overrides */
+  .header {
+    padding: 16px 20px;
+  }
+  .logo-image {
+    height: 36px;
+  }
+  .nav-links {
+    gap: 16px;
+  }
+  .btn-primary {
+    padding: 10px 20px;
+    font-size: 14px;
+  }
+
   /* Hero Overrides */
   .hero {
     padding: 120px 20px 60px;
@@ -1323,6 +1352,17 @@ button {
   /* Info Section Overrides */
   .info-grid {
     grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  .info-card {
+    aspect-ratio: auto;
+    height: auto;
+    padding: 30px 24px;
+  }
+  .info-card.card-image {
+    aspect-ratio: 1 / 1;
+    height: auto;
+    padding: 0;
   }
   .info-intro h2 {
     font-size: 28px;
@@ -1331,6 +1371,7 @@ button {
   /* Scheduler Overrides */
   .scheduler-section {
     padding: 140px 20px 60px;
+    overflow: hidden;
   }
   .scheduler-bg-split {
     background: linear-gradient(to bottom, #1a1a1a 15%, #f7f4ed 15%);
